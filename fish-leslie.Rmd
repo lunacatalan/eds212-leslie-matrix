@@ -11,11 +11,11 @@ knitr::opts_chunk$set(echo = TRUE)
 
 A population of fish we're interested in has four life stages: eggs (E), fry (F), juvenile (J), breeding adult (A). You are given the following:
 
-- Each breeding adult will produce, on average, 600 eggs
-- 25% of eggs will survive to become fry
-- 10% of fry will survive to become juveniles
-- 40% of juveniles will survive to become adults
-- Adult survival rate year to year is 80%
+-   Each breeding adult will produce, on average, 600 eggs
+-   25% of eggs will survive to become fry
+-   10% of fry will survive to become juveniles
+-   40% of juveniles will survive to become adults
+-   Adult survival rate year to year is 80%
 
 ### Create the matrix
 
@@ -36,7 +36,7 @@ Initial population (Year 0): 0 eggs, 40,000 fry, 600 juveniles, and 450 adults.
 fish_year0 <- c(0, 40000, 600, 450)
 ```
 
-### Project over several years 
+### Project over several years
 
 ```{r}
 # Population structure in year 1:
@@ -53,6 +53,16 @@ fish_year3
 
 ## ADD YOUR CODE TO PROJECT FOR YEARS 4, 5 & 6 HERE:
 
+# Population structure in year 4:
+fish_year4 <- fish_leslie %*% fish_year3
+fish_year4
+
+# Population structure in year 5:
+fish_year5 <- fish_leslie %*% fish_year4
+fish_year5
+
+# Population structure in year 6:
+fish_year6 <- fish_leslie %*% fish_year5
+fish_year6
 
 ```
-
